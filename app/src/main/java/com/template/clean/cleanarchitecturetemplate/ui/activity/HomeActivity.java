@@ -7,6 +7,8 @@ import com.template.clean.cleanarchitecturetemplate.domain.usecase.SampleUseCase
 import com.template.clean.cleanarchitecturetemplate.ui.activity.base.BaseActivity;
 import com.template.clean.cleanarchitecturetemplate.ui.presenter.HomePresenter;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 
 /**
@@ -15,7 +17,8 @@ import butterknife.BindView;
 
 public class HomeActivity extends BaseActivity implements HomePresenter.View {
 
-    private HomePresenter homePresenter;
+    @Inject
+    HomePresenter homePresenter;
 
     @BindView(R.id.sampleText)
     TextView sampleText;
