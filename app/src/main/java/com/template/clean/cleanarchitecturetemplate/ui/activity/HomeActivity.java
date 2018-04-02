@@ -31,7 +31,6 @@ public class HomeActivity extends BaseActivity implements HomePresenter.View {
     @Override
     public void initViews() {
         super.initViews();
-        homePresenter = new HomePresenter(this, new SampleUseCase());
         homePresenter.initialize();
     }
 

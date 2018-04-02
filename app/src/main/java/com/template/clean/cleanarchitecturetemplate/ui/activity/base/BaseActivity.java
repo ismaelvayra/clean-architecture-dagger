@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.template.clean.cleanarchitecturetemplate.ui.view.binder.ViewBinder;
 
 import butterknife.ButterKnife;
+import dagger.android.AndroidInjection;
 
 /**
  * Created by Ismael Vayra on 29/3/2018.
@@ -35,6 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity implements ViewBind
 
     @Override
     public void initViews() {
-
+        AndroidInjection.inject(this);
     }
 }
+

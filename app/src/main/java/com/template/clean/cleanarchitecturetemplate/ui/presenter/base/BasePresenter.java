@@ -8,12 +8,11 @@ import javax.inject.Inject;
  * Created by Ismael Vayra on 1/4/2018.
  */
 
-public class BasePresenter<T extends BasePresenter.View, V extends BaseUseCase> {
+public abstract class BasePresenter<T extends BasePresenter.View, V extends BaseUseCase> {
 
     private T view;
     private V useCase;
 
-    @Inject
     public BasePresenter(T view, V useCase) {
         this.view = view;
         this.useCase = useCase;
@@ -36,7 +35,6 @@ public class BasePresenter<T extends BasePresenter.View, V extends BaseUseCase> 
     }
 
     public void initialize() {
-
     }
 
     public interface View {

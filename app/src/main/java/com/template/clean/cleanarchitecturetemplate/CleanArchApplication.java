@@ -22,7 +22,10 @@ public class CleanArchApplication extends Application implements HasActivityInje
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerMainComponent.create().inject(this);
+        DaggerMainComponent.builder()
+                .application(this)
+                .build()
+                .inject(this);
     }
 
     @Override

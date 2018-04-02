@@ -4,12 +4,12 @@ package com.template.clean.cleanarchitecturetemplate.domain.model;
  * Created by Ismael Vayra on 1/4/2018.
  */
 
-public class SampleEntity {
+public class SampleArtistModel {
 
     String name;
     String type;
 
-    public SampleEntity(String name, String type) {
+    public SampleArtistModel(String name, String type) {
         this.name = name;
         this.type = type;
     }
